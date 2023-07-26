@@ -61,7 +61,7 @@ de cebadas restantes se mantendrá en 0, y cada vez que se intente beber se debe
 “Advertencia: el mate está lavado.” pero no se debe lanzar una excepción.
 """
 
-"""class Mate:
+class Mate:
     def __init__(self, cantidad_cebadas,cantidad_maxima_cebadas=10,lleno=False,vacio=False):
         
         self.cantidad_cebadas=cantidad_cebadas
@@ -107,11 +107,11 @@ de cebadas restantes se mantendrá en 0, y cada vez que se intente beber se debe
 cantidad_cebadas = int(input("Ingrese la cantidad de cebadas para el mate: "))
 nCantidad_de_cebadas = Mate(cantidad_cebadas)
 
-nCantidad_de_cebadas.cebar()
-nCantidad_de_cebadas.cebar()
+
+
 nCantidad_de_cebadas.cebar()
 nCantidad_de_cebadas.beber()
-nCantidad_de_cebadas.cebar()"""
+
 #---------------------------------------------------------------------------------------------------
 """3) Botella y Sacacorchos
  Escribir una clase Corcho, que contenga un atributo bodega (cadena con el nombre de la bodega).
@@ -123,3 +123,5 @@ una referencia al corcho sacado. Debe lanzar una excepción en el caso en que la
 o si el sacacorchos ya contiene un corcho.
  Agregar un método limpiar, que saque el corcho del sacacorchos, o lance una excepción 
 en el caso en el que no haya un corcho."""
+
+
