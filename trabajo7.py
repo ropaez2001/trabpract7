@@ -61,7 +61,7 @@ de cebadas restantes se mantendrá en 0, y cada vez que se intente beber se debe
 “Advertencia: el mate está lavado.” pero no se debe lanzar una excepción.
 """
 
-class Mate:
+"""class Mate:
     def __init__(self, cantidad_cebadas,cantidad_maxima_cebadas=10,lleno=False,vacio=False):
         
         self.cantidad_cebadas=cantidad_cebadas
@@ -75,7 +75,7 @@ class Mate:
             
             if self.cantidad_cebadas==0 and self.vacio==True:
                
-               self.lleno=False
+               
                print(" cuidado, todavia el mate esta vacio ")
                print(" La paba esta calentando")
                   
@@ -83,7 +83,7 @@ class Mate:
             else:
                 print(" comenzamos a cargar el mate que estaba vacio ")
                 self.vacio=False
-                self.lleno=True
+                
                 print(" Empezamos a tomar unos ricos mates con amigos ")
                 
         elif self.cantidad_cebadas >= self.cantidad_maxima_cebadas:
@@ -91,7 +91,7 @@ class Mate:
         
         else:
             self.vacio=True
-            self.lleno=False
+            
             print(" Se termino de cebar unos mates para los amigos, el mate esta lavado!!!")
     def beber(self):
         if self.cantidad_cebadas ==0:
@@ -100,7 +100,7 @@ class Mate:
             self.cantidad_cebadas-=1   
             if self.cantidad_cebadas==0:
               self.vacio=True
-              self.lleno=False
+              
     
     
             
@@ -110,7 +110,7 @@ nCantidad_de_cebadas = Mate(cantidad_cebadas)
 
 
 nCantidad_de_cebadas.cebar()
-nCantidad_de_cebadas.beber()
+nCantidad_de_cebadas.beber()"""
 
 #---------------------------------------------------------------------------------------------------
 """3) Botella y Sacacorchos
@@ -118,10 +118,76 @@ nCantidad_de_cebadas.beber()
  Escribir una clase Botella que contenga un atributo corcho con una referencia al corcho que la tapa, 
 o None si está destapada.
  Escribir una clase Sacacorchos que tenga un método destapar que le reciba una botella, 
-le saque el corcho y se guarde
-una referencia al corcho sacado. Debe lanzar una excepción en el caso en que la botella ya esté destapada, 
+le saque el corcho y se guarde una referencia al corcho sacado. 
+Debe lanzar una excepción en el caso en que la botella ya esté destapada, 
 o si el sacacorchos ya contiene un corcho.
  Agregar un método limpiar, que saque el corcho del sacacorchos, o lance una excepción 
 en el caso en el que no haya un corcho."""
+
+"""class Corcho:
+    def __init__(self,bodega):
+        self.bodega=bodega
+        self.bodega=bodega
+        
+        
+class Botella:
+    def __init__(self,corcho):
+        self.corcho=corcho
+        self.tapada=True
+        
+class Sacacorchos:
+    def __init__(self,botella):
+        self.botella = botella
+        self.estado=True
+        
+    def destapar(self):
+            if self.estado == True:
+                if self.botella.tapada ==True:
+                   print(" La botella esta destapada")
+                   self.botella.tapada=False
+                   self.estado=" lleno"
+                   print(" el sacacorcho esta lleno ")
+                else:
+                    print(" la botella no contiene al corcho")
+            else:
+                print(" La botella ya esta destapada")
+                
+    def limpiar(self): 
+            if self.estado == True:
+               raise Exception(" no hay corcho en el sacacorchos")
+            else:
+              self.botella.corcho=True
+#Creamos las instancias de los corchos y las instancias de las botelas y tambien sacacorchos
+
+corcho1= Corcho(bodega=" Balbo")
+
+
+botella1=Botella(corcho1)
+
+sacacorcho1=Sacacorchos(botella1)
+sacacorcho1.destapar()
+sacacorcho1.limpiar()
+
+print(sacacorcho1.estado)
+print(corcho1.bodega)
+
+corcho2=Corcho(corcho1)
+botella2=Botella(corcho2)
+sacacorcho2=Sacacorchos(botella2)
+sacacorcho2.destapar()
+sacacorcho2.limpiar()
+print(corcho2.bodega)
+
+"""
+
+"""4) Una heladería es un tipo especial de restaurante. Cree una clase Restaurante, cuyo método __init__() guarde dos atributos: 
+restaurante_nombre y tipo_comida. Cree un método describir_restaurante() que muestre estas piezas de información, y un 
+método abrir_restaurante() que muestre un mensaje indicando que el restaurante ahora está abierto. Luego cree una clase 
+Heladeria que herede de Restaurante, y agregue a los existentes un atributo llamado sabores que almacene una lista de los 
+sabores de helado disponibles. Escriba también un método que muestre estos valores, cree una instancia de la clase y llame 
+al método."""
+
+
+
 
 
